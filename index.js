@@ -10,18 +10,8 @@ app.use(express.static("public"));
 let frontCards = [
     {
         id:1,
-        title: "Prioritize Tasks",
-        description: "Focus on high-priority tasks first. Use methods like the Eisenhower Matrix to categorize tasks by importance and urgency."
-    },
-    {
-        id:2,
         title: "Set SMART Goals",
         description: "Make your goals Specific, Measurable, Achievable, Relevant, and Time-bound to ensure clarity and focus in achieving them."
-    },
-    {
-        id:3,
-        title: "Use Time Blocking",
-        description: "Allocate blocks of time to specific tasks or activities to reduce distractions and manage time effectively."
     },
 ];
 let cards = [...frontCards].reverse();
