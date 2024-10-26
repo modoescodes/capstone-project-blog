@@ -29,7 +29,7 @@
         <div class="col-lg-6 mx-auto">
             <p class="lead mb-4">Explore essential productivity hacks designed to enhance your daily life. This blog offers practical strategies for better time management, improved focus, and efficient task prioritization to boost your overall productivity. Hence, feel free to add your tips here.</p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                <form action="/add" method="post">
+                <form action="/add" method="GET">
                     <input class="btn btn-outline-info btn-lg px-4 gap-3" type="submit" value="Add your tip">
                 </form>
             </div>
@@ -44,10 +44,10 @@
                         <h5 class="card-title"><%= card.title %></h5>
                         <p class="card-text"><%= card.description %></p>
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                            <form action="/edit" method="post">
+                            <form action="/edit/<%= card.id %>" method="GET">
                                 <input class="btn mx-3" type="submit" value="🖊️">
                             </form>
-                            <form method="post">
+                            <form action="/delete/<%= card.id %>" method="POST">
                                 <input class="btn" type="submit" value="🗑️">
                             </form>
                         </div>
